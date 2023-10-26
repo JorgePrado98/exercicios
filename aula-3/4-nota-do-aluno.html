@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Nota do aluno</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Nota do aluno</h1>
+
+            <p>Indique as notas do aluno no 1º e 2º semestre:</p>
+
+            <label for="primeiroSemestreTexto">Nota do primeiro semestre:</label>
+            
+            <input type="number" id="txtprimeiroSemestre">
+
+            
+            <label for="segundoSemestreTexto">Nota do segundo semestre:</label>
+            
+            <input type="number" id="txtsegundoSemestre">
+
+
+
+            <button onclick="botao_click()">Clique e veja se o aluno foi aprovado ou reprovado</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+          var primeiroSemestreTexto = document.getElementById("txtprimeiroSemestre").value;
+          var segundoSemestreTexto = document.getElementById("txtsegundoSemestre").value;
+
+          var primeiroSemestre = parseFloat(primeiroSemestreTexto);
+          var segundoSemestre = parseFloat(segundoSemestreTexto);
+
+          var notaFinal = (primeiroSemestre + segundoSemestre) / 2;
+
+          if (notaFinal < 6) {
+            alert("Sua nota final foi " + notaFinal + " e você está REPROVADO");
+          }
+
+          else {
+            alert("Sua nota final foi " + notaFinal + " e você está APROVADO! PARABÉNS FELLA!!!!");
+
+          }
+
+
+
+
+            
+
+
+        }
+
+    </script>
+
+</body>
+</html>

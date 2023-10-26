@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+<head>
+    <title>CONSUMO MÉDIO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>CONSUMO MÉDIO</h1>
+
+
+            <label for="txt1">Distância percorrida:</label>
+            
+            <input type="number" id="caixaDeTexto1">
+
+            <label for="txt1">Quantidade de combustível:</label>
+            
+            <input type="number" id="caixaDeTexto2">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+          var caixa1 = document.getElementById ("caixaDeTexto1").value;
+          var numero1 = parseFloat(caixa1);
+
+          var caixa2 = document.getElementById("caixaDeTexto2").value;
+          var numero2 = parseFloat(caixa2);
+
+          var media = numero1 / numero2;
+          var mensagem = "O consumo médio do carro é de " + media.toFixed(2) + " km/L";
+          alert(mensagem);
+
+          
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+<head>
+    <title>Média</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Média</h1>
+
+            <p>Informe os valores abaixo para o cálculo da média entre eles</p>
+
+            <label for="txxt1">Número 1:</label>
+            
+            <input type="number" id="caixaDeTexto1">
+
+            <label for="txxt1">Número 2:</label>
+            
+            <input type="number" id="caixaDeTexto2">
+
+            <label for="txxt1">Número 3:</label>
+            
+            <input type="number" id="caixaDeTexto3">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixa1 = document.getElementById("caixaDeTexto1").value;
+            var numero1 = parseFloat(caixa1);
+
+            var caixa2 = document.getElementById("caixaDeTexto2").value;
+            var numero2 = parseFloat(caixa2);
+
+            var caixa3 = document.getElementById("caixaDeTexto3").value;
+            var numero3 = parseFloat(caixa3);
+
+            var media = (numero1 + numero2 + numero3) / 3;
+
+            var mensagem = "A MÉDIA É " + media;
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Glicose</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Glicose</h1>
+
+            <p>Indique o valor da glicose do paciente para receber o diagnóstico</p>
+
+            <label for="txt1">Valor de referência:</label>
+            
+            <input type="number" id="txtValorGlicose">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var valorDaGlicoseTexto = document.getElementById("txtValorGlicose").value;
+            var valorGlicose = parseFloat(valorDaGlicoseTexto);
+
+            if(valorGlicose <= 100) {
+                alert("O nível de glicose está normal.");
+            } else if(valorGlicose > 100 && valorGlicose <= 140) {
+                alert("O nível de glicose do paciente está elevado");
+            } else {
+                alert("O paciente está com diabetes");
+            }
+    
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Maior, menor e média</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Maior, menor e média</h1>
+
+            <label for="txtQuantidadeNumeros">Digite a quantidade de números:</label>
+
+            <input type="number" id="txtQuantidadeNumeros"/>
+
+            <label for="txtNumero">Digite o número</label>
+
+            <input type="number" id="txtNumero"/>
+
+            <button onclick="botao_click()">Armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+var numeros = [];
+
+function botao_click() {
+
+    var txtQuantidadeNumeros = document.getElementById("txtQuantidadeNumeros");
+
+    var qtdeNumeros = parseInt(txtQuantidadeNumeros.value);
+
+    var txtNumero = document.getElementById("txtNumero");
+
+
+    if (numeros.length < qtdeNumeros) {
+
+        var numeroDigitado = parseInt(txtNumero.value);
+
+        numeros.push(numeroDigitado);
+
+        txtNumero.value = "";
+
+        txtNumero.focus();
+    }
+
+    if (numeros.length == qtdeNumeros) {
+
+        var maiorNumero;
+        var menorNumero;
+        var soma = 0;
+        var media;
+
+        for (var i = 0; i < numeros.length; i++) {
+
+            var numero = numeros[i];
+
+            if (maiorNumero == undefined || numero > maiorNumero) {
+                maiorNumero = numero;
+            }
+
+            if (menorNumero == undefined || numero < menorNumero) {
+                menorNumero = numero;
+            }
+
+        soma = soma + numero;
+
+        }
+
+        media = soma / numeros.length;
+
+        alert("O maior número é " + maiorNumero + ". O menor número é " + menorNumero + ". A média é " + media.toFixed(2));
+
+        
+    }
+}
+
+</script>
+
+</body>
+</html>

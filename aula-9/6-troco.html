@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+<head>
+    <title>TROCO</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>TROCO</h1>
+
+            <label for="txt1">DIGITE O PREÇO UNITÁRIO DO PRODUTO:</label>
+            
+            <input type="number" id="caixaDeTexto1">
+
+            <label for="txt1">DIGITE A QUANTIDADE DE UNIDADES DO PRODUTO:</label>
+            
+            <input type="number" id="caixaDeTexto2">
+
+            <label for="txt1">DIGITE O VALOR RECEBIDO DO CLIENTE:</label>
+            
+            <input type="number" id="caixaDeTexto3">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+        var caixa1 = document.getElementById("caixaDeTexto1").value;
+        var numero1 = parseFloat(caixa1);
+
+        var caixa2 = document.getElementById("caixaDeTexto2").value;
+        var numero2 = parseInt(caixa2);
+
+        var caixa3 = document.getElementById("caixaDeTexto3").value;
+        var numero3 = parseFloat(caixa3);
+
+        var multiply = (numero1 * numero2);
+        var mensagem = "O valor da compra é de R$ " + multiply.toFixed(2);
+        alert(mensagem);
+
+        var subtraction = numero3 - (numero1 * numero2);
+        var mensagem = "O troco do cliente é de R$ " + subtraction.toFixed(2);
+        alert(mensagem);
+
+
+        }
+
+    </script>
+
+</body>
+</html>

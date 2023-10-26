@@ -1,0 +1,9 @@
+{
+  "carro": {
+    "marca": "Honda",
+    "modelo": "Fit",
+    "placa": "GDO-9224",
+    "cor": "preto",
+    "anoFabricacao": 2007
+  }
+}

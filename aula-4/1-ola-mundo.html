@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Olá mundo</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Olá mundo com while</h1>
+
+            <p>Digite abaixo quantas vezes você quer dizer Olá Mundo</p>
+
+            <label for="txt1">Quantidade de vezes:</label>
+            
+            <input type="text" id="txtQuantidadeDeVezes">
+
+            <button onclick="botao_click()">Dizer olá mundo</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+        var quantidadeTexto = document.getElementById("txtQuantidadeDeVezes").value;
+
+        var quantidade = parseInt (quantidadeTexto);
+
+        while(quantidade > 0) {
+            alert("Olá mundo");
+
+            quantidade = quantidade - 1;
+
+        }
+        
+
+        }
+
+    </script>
+
+</body>
+</html>

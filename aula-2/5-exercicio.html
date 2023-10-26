@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+<head>
+    <title>Terreno</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Terreno</h1>
+            
+
+            <label for="txt1">Digite o valor da largura:</label>
+            
+            <input type="number" id="caixaDeTexto1">
+
+            
+            <label for="txt1">Digite o valor do comprimento:</label>
+            
+            <input type="number" id="caixaDeTexto2">
+
+            
+            <label for="txt1">Digite o valor do M²:</label>
+            
+            <input type="number" id="caixaDeTexto3">
+
+
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixa1 = document.getElementById("caixaDeTexto1").value;
+            var numero1 = parseFloat(caixa1);
+            
+
+            var caixa2 = document.getElementById("caixaDeTexto2").value;
+            var numero2 = parseFloat(caixa2);
+
+            var caixa3 = document.getElementById("caixaDeTexto3").value;
+            var numero3 = parseFloat(caixa3);
+
+            var multiply1 = numero1 * numero2;
+            var mensagem = "O valor da área é " + multiply1 + "m²";
+            alert(mensagem);
+
+            var multiply2 = (numero1 * numero2) * numero3;
+            var mensagem = "O valor do terreno é de R$" + multiply2.toFixed(2);
+            alert(mensagem);
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Lista de clientes</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Lista de clientes</h1>
+
+            <button onclick="botao_click()">Exibir clientes</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var clientes = ["Roberto", "Adriana", "José", "Lucas", "Felipe", "Eduardo"];
+
+        function botao_click() {
+
+            for (var i = 0; i < clientes.length; i++) {
+               
+                var cliente = clientes[i];
+
+                alert(cliente);
+            }
+
+            var todosClientes = clientes.toString();
+
+            alert(todosClientes);
+
+        }
+
+    </script>
+
+</body>
+</html>
